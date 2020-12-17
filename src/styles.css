@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,400&display=swap');html, body{
+    height: 100%;
+}
+blockquote {
+    border-left: 5px solid rgba(41, 38, 216, 0.753) !important;
+    padding-left: 20px;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 20px !important;
+}
+blockquote p  {
+    margin-bottom: 2px !important;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+.markdown {
+    background-color: rgba(253, 253, 253, 0.521); 
+    overflow-x: hidden;
+    overflow-y: clip;
+} 
+pre {
+    padding: 10px;
+    border: 2px solid rgba(173, 173, 173, 0.473);
+    border-radius: 6px;
+    background-color:  rgba(214, 214, 214, 0.801) !important;
+    text-orientation: initial;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+    background: linear-gradient(45deg, #5fdbd7, #7a3aa5);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px !important;
+}
+pre code {
+	font-family: 'Fira Code', monospace !important;
+}
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead th {
+    background-color: #55608f;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+		position: relative;
+    }
+tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+ul, blockquote, img, h1,table {
+    margin-bottom: 20px !important;
+}

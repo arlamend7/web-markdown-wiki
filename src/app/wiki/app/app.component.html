@@ -1,0 +1,9 @@
+<div class="d-flex" style="height: 100%;">
+  <div class="d-flex flex-column p-4"style="flex: 1;">
+    <h1 class="align-self-center">Wiki</h1>
+    <p *ngFor="let file of dir" (click)="navegate(file)"> {{file}}</p>
+  </div>
+  <div style="flex: 4; background-color: rgba(214, 212, 212, 0.521);">
+    <router-outlet></router-outlet>
+  </div>
+</div>
