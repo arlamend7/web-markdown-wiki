@@ -5,7 +5,7 @@
     height: 100%;
 }
 blockquote {
-    border-left: 5px solid rgba(41, 38, 216, 0.753) !important;
+    border-left: 5px solid rgba(47, 44, 230, 0.753) !important;
     padding-left: 20px;
     font-family: 'Roboto Condensed', sans-serif !important;
     font-size: 20px !important;
@@ -23,9 +23,9 @@ blockquote p  {
 } 
 pre {
     padding: 10px;
-    border: 2px solid rgba(173, 173, 173, 0.473);
+    border: 2px solid rgba(108, 109, 175, 0.473);
     border-radius: 6px;
-    background-color:  rgba(214, 214, 214, 0.801) !important;
+    background-color:   rgba(228, 230, 247, 0.993) !important;
     text-orientation: initial;
 }
 
@@ -88,7 +88,48 @@ tbody td:hover::before {
     background-color: rgba(255, 255, 255, 0.2);
     z-index: -1;
 }
+tbody td:hover {
+    color: #55608f !important;
+    font-weight: 900;
+}
 
 ul, blockquote, img, h1,table {
     margin-bottom: 20px !important;
 }
+
+textarea:focus {
+    outline: none !important;
+}
+textarea{
+    border: none !important;
+    border-radius: 5px;
+    user-select: none;
+}
+
+ol {
+    line-height: 2;
+  }
+  
+  ol li {
+    list-style-type: none;
+    counter-increment: item;
+  }
+  
+  ol li:before {
+    content: counter(item);
+    display: inline-block;
+    width: 12px;
+    height: 20px;
+    font-family: "Indie Flower", cursive;
+    margin-right: 5px;
+    background-color: #f9dd94;
+    color: #7eb4e2;
+    font-weight: bold;
+    font-size: 140%;
+    padding: 0 8px 8px;
+    border-radius: 3px;
+    line-height: 1.3;
+  }
+      
+  
+  

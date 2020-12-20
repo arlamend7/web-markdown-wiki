@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 @Injectable({providedIn : "root"})
 export class MdService {
-    url : string = "http://localhost:3000/wiki/";
+    url : string = "https://app-markdown-wiki.herokuapp.com/wiki/";
     path:string = "D://markdown/";
     constructor(private http : HttpClient){}
 

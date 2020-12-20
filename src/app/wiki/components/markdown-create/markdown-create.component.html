@@ -1,8 +1,36 @@
-<div class="d-flex" style="height: 100%;">
-    <div class="d-flex flex-column p-4"style="flex: 1;">
-      <textarea [(ngModel)]="text" (keyup)="transform()" rows="50"></textarea>
+<div style="height: 7%;">
+  <div class="input-group h-100">
+    <input type="text" [(ngModel)]="FileName" class="form-control" placeholder="File Name" style="height: 100%;">
+    <button type="button" class="btn btn-dark" style="width: 60px;" (click)="save()"><i class="fas fa-save"></i></button>
+  </div>
+</div>
+<div class="d-flex" style="height: 93%;">
+    <div class="d-flex flex-column"style="flex: 2;">
+        <div class="btn-toolbar d-flex justify-content-between" role="toolbar" aria-label="Toolbar with button groups" style="height: 50px;">
+          <div class="btn-group me-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-primary" (click)="table()"><i class="fas fa-table"></i></button>
+            <button type="button" class="btn btn-primary" (click)="Lists()"><i class="fas fa-list"></i></button>
+            <button type="button" class="btn btn-primary" (click)="Code()"><i class="fas fa-code"></i></button>
+          </div>
+          <div class="btn-group me-2" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-secondary" (click)="Link()" ><i class="fas fa-link"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="Image()"><i class="far fa-image"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="Quote()"><i class="fas fa-quote-right"></i></button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-info" (click)="Headers()"><i class="fas fa-heading"></i></button>
+            <button type="button" class="btn btn-info" (click)="Sub()"><i class="fas fa-subscript"></i></button>
+            <button type="button" class="btn btn-info" (click)="Underline()"><i class="fas fa-underline"></i></button>
+            <button type="button" class="btn btn-info" (click)="Strike()"><i class="fas fa-strikethrough"></i></button>
+            <button type="button" class="btn btn-info" (click)="Bold()"><i class="fas fa-bold"></i></button>
+            <button type="button" class="btn btn-info" (click)="Italic()"><i class="fas fa-italic"></i></button>
+            <button type="button" class="btn btn-info" (click)="BoldItalic()"><i class="fas fa-bold"></i><i class="fas fa-italic"></i></button>
+            <button type="button" class="btn btn-info" (click)="Comment()"><i class="fas fa-comment"></i></button>
+          </div>
+        </div>
+      <textarea class="border-none" style="resize: none;" [(ngModel)]="text" (keyup)="transform()" rows="50" cols="90"></textarea>
     </div>
-    <div class="pl-4 pt-3 markdown" style="flex: 2;">
+    <div class="pl-4 pt-3 markdown" style="flex: 3;">
       <div [innerHTML]="html"></div>
     </div>
   </div>

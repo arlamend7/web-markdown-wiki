@@ -1,9 +1,10 @@
 <div class="d-flex" style="height: 100%;">
   <div class="d-flex flex-column p-4"style="flex: 1;">
+    <i class="far fa-plus-square align-self-end" (click)="create()"></i>
     <h1 class="align-self-center">Wiki</h1>
     <p *ngFor="let file of dir" (click)="navegate(file)"> {{file}}</p>
   </div>
-  <div style="flex: 4; background-color: rgba(214, 212, 212, 0.521);">
+  <div class="pl-5 pt-3 markdown" style="flex: 4;">
     <router-outlet></router-outlet>
   </div>
 </div>

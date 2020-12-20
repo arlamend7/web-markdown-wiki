@@ -9,8 +9,8 @@ import {Converter} from 'showdown';
 export class AppComponent implements OnInit{
   title = 'markdown-web';
   dir : string[] = []
-  navegate = (fileName) => this.route.navigate(['wiki/' + fileName])
-
+  navegate = (fileName) => this.route.navigate(['wiki/visualization/' + fileName])
+  create = () => this.route.navigate(['wiki/create'])
   constructor(private route : Router,
               private MdService : MdService){
 
@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
   }
   getDir(){
     this.MdService.getDir().subscribe((x:string[]) => {
-      console.log(x);
       //@ts-ignore
       this.dir = x.dir.map((x: string) => x.substring(0,x.length-3))
     })
